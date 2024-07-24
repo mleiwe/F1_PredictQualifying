@@ -11,17 +11,17 @@ MLFlow is used to track the models. These will be stored in a S3 bucket
 
 ## Workflow orchestration (TBB - To be built)
 I've built the entire workflow in Mage, with several different pipelines
-    * Data_Prep: This pipeline pulls in data that will be used to train the model
-    * Model_Train: This pipeline uses the Data_Prep output to train the model.
-    * Model_Predict_Full: This will predict the qualifying times and positions for every driver for a qualifying session.
-    * Model_Predict_Hypothetical: Here the user can enter the values of each feature, and observe the predicted effect.
+    * prepare_data_from_csvs: This pipeline pulls in data that will be used to train the model
+    * train_model: This pipeline uses the Data_Prep output to train the model.
+    * model_predict_full: This will predict the qualifying times and positions for every driver for a qualifying session.
+    * model_predict_hypothetical: Here the user can enter the values of each feature, and observe the predicted effect.
 
 ## Model deployment (TBB - To be built)
 * Aim is to deploy this as a lambda function on AWS
 
-## Model Monitoring (TBB - To be built)
+## Model Monitoring (Under Construction)
 I've utilised the Mage.ai dashboards
-    * Data_drift: Look at the dashboard for the `Data_Prep` pipeline
+    * Data Quality: Look at the dashboard for the `prepare_data_from_csvs` pipeline
     * Model_drift: Look at the dashboard for the `Model_Predict_Full` pipeline
 
 ## Reproducibility (TBB - To be built)
