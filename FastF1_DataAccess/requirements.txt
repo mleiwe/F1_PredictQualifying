@@ -1,0 +1,3 @@
+fastf1
+unidecode
+numpy == 1.26.4
